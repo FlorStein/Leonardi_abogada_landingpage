@@ -5,6 +5,7 @@
   --taupe:#bfb8b0;
   --sand:#e0d8cf;
   --ink:#D9CEC5;
+  --white:#ffffff;
   --radius:18px;
   --shadow:0 10px 30px rgba(0,0,0,.4);
   --container:1120px;
@@ -52,15 +53,16 @@ a{color:var(--sand);text-decoration:none}
 .mnav-link:hover{background:rgba(255,255,255,.06)}
 
 section,header.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:left;position:relative;padding:120px 20px}
-.sectionTitle{font-family:'Marcellus',serif;color:var(--sand);font-size:2.5rem;margin-bottom:10px}
-.sectionLead{color:var(--taupe);margin-bottom:20px;font-size:1.25rem;line-height:1.8}
+.sectionTitle{font-family:'Marcellus',serif;color:var(--white);font-size:3.5rem;margin-bottom:30px}
+.sectionLead{color:#122E40;margin-bottom:20px;font-size:1.25rem;line-height:1.8}
+.direccion {font-size:1.25rem; color: var(--white); }
 
 header.hero{background:url('assets/Buenos_Aires.jpg') center/cover no-repeat}
 header.hero:before{content:"";position:absolute;inset:0;background:rgba(18,46,64,.75)}
 header.hero>*{position:relative;z-index:1}
 .hero .content{max-width:75%;margin:0 auto}
-.hero h1{font-size:clamp(2rem, 6vw, 4rem);line-height:1.2;word-break:break-word;color:var(--sand)}
-.hero p{color:var(--taupe);font-size:1.2rem}
+.hero h1{font-size:clamp(2rem, 6vw, 4rem);line-height:1.2;word-break:break-word;color:var(--white)}
+.hero p{color:var(--white);font-size:1.2rem}
 
 .services{background:linear-gradient(rgba(18,46,64,.6),rgba(18,46,64,.6)), url('assets/palacio-justicia-2.jpg') center/cover no-repeat;width:100%}
 .about{background:linear-gradient(rgba(18,46,64,.75),rgba(18,46,64,.75)), url('assets/justicia.jpg') center/cover no-repeat;width:100%;color:#fff}
@@ -70,7 +72,7 @@ header.hero>*{position:relative;z-index:1}
 @media(max-width:1024px){.center{max-width:85vw}}
 
 .glass{
-  background: rgba(0,0,0,0.35);
+  background: rgb(255, 255, 255);
   border: 1px solid rgba(255,255,255,0.18);
   box-shadow: 0 12px 40px rgba(0,0,0,.45);
   backdrop-filter: blur(10px);
