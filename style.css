@@ -53,7 +53,7 @@ a{color:var(--sand);text-decoration:none}
 .mnav-link:hover{background:rgba(255,255,255,.06)}
 
 section,header.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:left;position:relative;padding:120px 20px}
-.sectionTitle{font-family:'Marcellus',serif;color:var(--white);font-size:3.5rem;margin-bottom:30px}
+.sectionTitle{font-family:'Marcellus',serif;color:var(--white);font-size:3.5rem;margin-bottom:30px;text-align:center}
 .sectionLead{color:#122E40;margin-bottom:20px;font-size:1.25rem;line-height:1.8}
 .direccion {font-size:1.25rem; color: var(--white); }
 
@@ -61,8 +61,8 @@ header.hero{background:url('assets/Buenos_Aires.jpg') center/cover no-repeat}
 header.hero:before{content:"";position:absolute;inset:0;background:rgba(18,46,64,.75)}
 header.hero>*{position:relative;z-index:1}
 .hero .content{max-width:75%;margin:0 auto}
-.hero h1{font-size:clamp(2rem, 6vw, 4rem);line-height:1.2;word-break:break-word;color:var(--white)}
-.hero p{color:var(--white);font-size:1.2rem}
+.hero h1{font-size:clamp(2rem, 6vw, 4rem);line-height:1.2;word-break:break-word;color:var(--white);margin-bottom:24px}
+.hero p{color:var(--white);font-size:1.25rem}
 
 .services{background:linear-gradient(rgba(18,46,64,.6),rgba(18,46,64,.6)), url('assets/palacio-justicia-2.jpg') center/cover no-repeat;width:100%}
 .about{background:linear-gradient(rgba(18,46,64,.75),rgba(18,46,64,.75)), url('assets/justicia.jpg') center/cover no-repeat;width:100%;color:#fff}
@@ -88,6 +88,31 @@ header.hero>*{position:relative;z-index:1}
 
 form input,form textarea{font-size:1.1rem}
 footer{background:var(--teal);color:#f5f5f5;padding:20px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+
+/* WhatsApp Button */
+.waButton{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:1rem;
+  transition:all .3s ease;
+  box-shadow:0 4px 12px rgba(37,211,102,.3)
+}
+.waButton:hover{
+  background:#20BA5A;
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(37,211,102,.4)
+}
+.waButton svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0
+}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease}
