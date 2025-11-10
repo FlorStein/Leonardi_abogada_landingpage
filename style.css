@@ -81,6 +81,32 @@ header.hero>*{position:relative;z-index:1}
   padding: 24px 28px;
 }
 
+/* Services List */
+.services-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px 24px;
+  color:var(--bg);
+  font-size:1.15rem;
+  line-height:1.6
+}
+.services-list li{
+  position:relative;
+  padding-left:28px
+}
+.services-list li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--bordeaux);
+  font-weight:700;
+  font-size:1.3rem
+}
+@media(max-width:768px){
+  .services-list{grid-template-columns:1fr;gap:12px}
+}
+
 #contacto{background:var(--teal);color:#fff;width:100%;min-height:100vh;padding-top:140px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:var(--container);margin:auto}
 .mapwrap{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.1)}
