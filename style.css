@@ -1,0 +1,93 @@
+:root {
+  --bg:#122E40;
+  --bordeaux:#731c2c;
+  --teal:#1e4e5a;
+  --taupe:#bfb8b0;
+  --sand:#e0d8cf;
+  --ink:#D9CEC5;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.4);
+  --container:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--sand);text-decoration:none}
+
+/* Nav fija */
+.nav{position:fixed;top:0;left:0;right:0;background:rgba(18,46,64,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);z-index:1100}
+.nav .wrap{max-width:var(--container);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+.brand img{width:30px;height:30px}
+.links a{margin-left:20px;color:var(--ink);font-weight:600}
+.cta{background:var(--bordeaux);color:#fff;padding:10px 16px;border:none;border-radius:12px;font-weight:700;cursor:pointer}
+
+/* Hamburguesa: oculta por defecto, visible solo en <=900px */
+.mnav-btn{display:none;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:transparent;place-items:center}
+.mnav-btn span{display:block;width:20px;height:2px;background:#fff;position:relative}
+.mnav-btn span:nth-child(1){top:-6px}
+.mnav-btn span:nth-child(3){top:6px}
+@media (max-width:900px){ .mnav-btn{display:grid} .links{display:none} }
+@media (min-width:901px){ .mnav-btn{display:none} .links{display:block} }
+
+/* Drawer por ENCIMA de la nav */
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);z-index:1150}
+.mnav-drawer{
+  position:fixed;top:0;left:0;
+  height:100svh;min-height:100vh;
+  width:84vw;max-width:360px;
+  background:#0f2532;
+  border-right:1px solid rgba(255,255,255,.12);
+  box-shadow:20px 0 40px rgba(0,0,0,.35);
+  transform:translateX(-100%);
+  transition:transform .3s ease;
+  z-index:1200; /* > nav */
+  padding:16px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.mnav-drawer.open{transform:none}
+.mnav-close{position:sticky;top:0;margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:10px;padding:6px 10px;font-size:18px;cursor:pointer}
+.mnav-link{display:block;padding:14px 10px;margin-top:6px;color:#fff;border-radius:10px}
+.mnav-link:hover{background:rgba(255,255,255,.06)}
+
+section,header.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:left;position:relative;padding:120px 20px}
+.sectionTitle{font-family:'Marcellus',serif;color:var(--sand);font-size:2.5rem;margin-bottom:10px}
+.sectionLead{color:var(--taupe);margin-bottom:20px;font-size:1.25rem;line-height:1.8}
+
+header.hero{background:url('assets/Buenos_Aires.jpg') center/cover no-repeat}
+header.hero:before{content:"";position:absolute;inset:0;background:rgba(18,46,64,.75)}
+header.hero>*{position:relative;z-index:1}
+.hero .content{max-width:75%;margin:0 auto}
+.hero h1{font-size:clamp(2rem, 6vw, 4rem);line-height:1.2;word-break:break-word;color:var(--sand)}
+.hero p{color:var(--taupe);font-size:1.2rem}
+
+.services{background:linear-gradient(rgba(18,46,64,.6),rgba(18,46,64,.6)), url('assets/palacio-justicia-2.jpg') center/cover no-repeat;width:100%}
+.about{background:linear-gradient(rgba(18,46,64,.75),rgba(18,46,64,.75)), url('assets/justicia.jpg') center/cover no-repeat;width:100%;color:#fff}
+.mision{background:linear-gradient(rgba(18,46,64,.7),rgba(18,46,64,.7)), url('assets/archivogeneral.jpg') center/cover no-repeat;width:100%}
+
+.center{max-width:900px;margin:0 auto}
+@media(max-width:1024px){.center{max-width:85vw}}
+
+.glass{
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+#contacto{background:var(--teal);color:#fff;width:100%;min-height:100vh;padding-top:140px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:var(--container);margin:auto}
+.mapwrap{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.1)}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+form input,form textarea{font-size:1.1rem}
+footer{background:var(--teal);color:#f5f5f5;padding:20px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dra. Paola Leonardi – Estudio Jurídico | CABA</title>
+  <meta name="description" content="Dra. Paola Leonardi (UBA), más de 20 años de experiencia. Derecho de familia, civil y comercial, penal, consumo y sucesiones. Consultas en CABA." />
+  <meta name="theme-color" content="#122E40" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <button class="mnav-btn" id="mnavBtn" aria-label="Abrir menú" aria-controls="mnavPanel" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#top"><img src="assets/UBA.svg" alt="Insignia UBA">Dra. Paola Leonardi</a>
+      <div class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#mision">Misión</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agenda tu consulta</button>
+    </div>
+  </nav>
+
+  <div class="backdrop" id="mnavBackdrop" hidden></div>
+  <aside class="mnav-drawer" id="mnavPanel" aria-hidden="true">
+    <button class="mnav-close" id="mnavClose" aria-label="Cerrar menú">✕</button>
+    <a href="#servicios" class="mnav-link">Servicios</a>
+    <a href="#sobre" class="mnav-link">Sobre mí</a>
+    <a href="#mision" class="mnav-link">Misión y valores</a>
+    <a href="#contacto" class="mnav-link">Contacto</a>
+    <a href="https://wa.me/5491164693373?text=Hola%20Dra.%20Leonardi%2C%20quisiera%20agendar%20una%20consulta." class="mnav-link">WhatsApp</a>
+  </aside>
+
+  <header class="hero" id="top">
+    <div class="content reveal">
+      <h1>Asesoramiento legal estratégico, humano y confiable.</h1>
+      <p>Fundadora de <strong>Leonardi & Asoc.</strong> desde 1999. Especialista en Derecho de Familia, Violencia Familiar, Derecho Civil y Comercial, Derecho Penal, Derecho de Sucesiones y Consultoría Legal Integral.</p>
+    </div>
+  </header>
+
+  <section id="servicios" class="services reveal">
+    <h2 class="sectionTitle">Áreas de práctica</h2>
+    <div class="glass center">
+      <p class="sectionLead">Consultoría legal • Derecho de familia • Derecho de defensa penal • Derecho de daños personales • Derecho concursal • Derecho de propiedad • Derecho de planificación patrimonial • Derecho de marcas • Derecho del consumidor • Derecho de sucesiones</p>
+    </div>
+  </section>
+
+  <section id="sobre" class="about reveal">
+    <h2 class="sectionTitle">Sobre mí</h2>
+    <div class="glass center">
+      <p class="sectionLead">Soy la Dra. Paola Leonardi, abogada egresada de la Universidad de Buenos Aires, con más de 20 años de experiencia en el ejercicio profesional. Fundé mi estudio en 1999 con el propósito de brindar un servicio legal cercano, confiable y eficaz.</p>
+    </div>
+  </section>
+
+  <section id="mision" class="mision reveal">
+    <h2 class="sectionTitle">Misión y valores</h2>
+    <div class="glass center">
+      <p class="sectionLead">Nuestra misión es ofrecer soluciones jurídicas efectivas, con empatía y ética profesional. En Leonardi & Asoc. creemos en un derecho al servicio de las personas, promoviendo el respeto, la transparencia y la justicia.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="reveal">
+    <h2 class="sectionTitle">Contacto</h2>
+    <div class="contact-grid">
+      <form class="card" style="background:rgba(255,255,255,.1);border-radius:16px;padding:20px;">
+        <label>Nombre<br><input required placeholder="Tu nombre" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.15);color:#fff"></label>
+        <br>
+        <label>Correo<br><input type="email" required placeholder="email@dominio.com" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.15);color:#fff"></label>
+        <br>
+        <label>Mensaje<br><textarea rows="5" required placeholder="Contame tu consulta" style="width:100%;padding:10px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(0,0,0,.15);color:#fff"></textarea></label>
+        <br>
+        <button class="cta" type="submit">Enviar</button>
+        <div style="margin-top:10px">
+          <a class="waLink" href="https://wa.me/5491164693373?text=Hola%20Dra.%20Leonardi%2C%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener">WhatsApp directo</a>
+        </div>
+      </form>
+      <aside>
+        <p class="sectionLead">Paraguay 1307, Piso 1, Depto 20 – CABA</p>
+        <div class="mapwrap">
+          <iframe width="100%" height="320" style="border:0;border-radius:16px" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Paraguay%201307%20CABA&output=embed"></iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="y"></span> Leonardi & Asoc. – Estudio Jurídico | CABA</p>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    // Reveal animation
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced){ els.forEach(e=>e.classList.add('show')); return; }
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach((e)=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+      },{threshold:0.15});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Mobile drawer (overlay por encima de la nav + oculto en desktop)
+    (function(){
+      const btn = document.getElementById('mnavBtn');
+      const panel = document.getElementById('mnavPanel');
+      const backdrop = document.getElementById('mnavBackdrop');
+      const closeBtn = document.getElementById('mnavClose');
+      const links = panel.querySelectorAll('a');
+
+      function lockBody(lock){
+        document.documentElement.style.overflow = lock ? 'hidden' : '';
+        document.body.style.overflow = lock ? 'hidden' : '';
+        document.body.style.touchAction = lock ? 'none' : '';
+      }
+
+      function openMenu(){
+        panel.classList.add('open');
+        backdrop.hidden = false;
+        panel.setAttribute('aria-hidden','false');
+        btn.setAttribute('aria-expanded','true');
+        closeBtn.focus();
+        lockBody(true);
+      }
+      function closeMenu(){
+        panel.classList.remove('open');
+        backdrop.hidden = true;
+        panel.setAttribute('aria-hidden','true');
+        btn.setAttribute('aria-expanded','false');
+        btn.focus();
+        lockBody(false);
+      }
+      btn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      backdrop.addEventListener('click', closeMenu);
+      links.forEach(a=>a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && panel.classList.contains('open')) closeMenu(); });
+    })();
+  </script>
+</body>
+</html>
